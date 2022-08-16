@@ -22,8 +22,14 @@ a{
 h2, h3, h4{
     text-transform: uppercase;
 }
-/*utilities*/
 
+
+/*utilities*/
+.container{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
 /*navigation*/
 nav.menu{
     display: flex;
@@ -83,10 +89,14 @@ a.menu-link span{
 
 /*header*/
 header{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     color: white;
     margin-top: 40px;
     text-align: center;
     height: 180px
+
 }
 
 header p.title{
@@ -111,4 +121,168 @@ header p.description span{
 header p.description span:hover{
     box-shadow: inset  0 -100px 0 0  #FFD51C;
     color: black
+}
+
+/*Main*/
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Main news*/
+.main-news{
+    position: relative; /*parent*/
+    overflow: hidden;
+}
+
+.img-container:hover{
+    transform: scale(1.1);
+}
+.main-news-text{
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    color: white;
+}
+
+.main-news-text h3{
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.main-news-text p{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.main-news-text h4{
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.main-news-text i{
+    margin-right: 5px;
+}
+
+.img-container{
+    width: 100%;
+}
+
+/*Secondary news*/
+.secondary-news{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.secondary-news:hover img{
+    border-bottom: 5px solid #FFD51C;
+    transform: scale(1.1);
+}
+
+.secondary-news-img img{
+    height: 250px;
+    min-width: 100%;
+}
+
+.secondary-news-text{
+    margin-top: -10px;
+    background-color: white;
+    height: 110px;
+    padding: 20px;
+}
+
+.secondary-news-text h3{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    
+}
+
+.secondary-news-text h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.secondary-news-text p{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.secondary-news-text h4{
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.secondary-news-text i{
+    margin-right: 5px;
+}
+
+
+/*Today's picks*/
+.todays-picks{
+    display: flex;
+    flex-direction: column;
+    color: white;
+       
+}
+
+.todays-picks h2{
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-left: 4px solid #FFD51C;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.pick-element{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.pick-element-img img{
+    width: 120px;
+    height: 100px;
+}
+
+.pick-element-text{
+    padding: 10px;
+}
+
+.pick-element-text h3{
+    margin-top: -20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.pick-element-text h3 span{
+    font-weight: 400;
+}
+
+.pick-element-text p{
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.pick-element-text p:hover{
+    text-decoration: underline;
 }
