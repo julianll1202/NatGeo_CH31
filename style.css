@@ -7,8 +7,12 @@
 }
 
 body{
+   
     font-family: 'Roboto', sans-serif;
     background-color: black;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 img{
     max-width: 100%;
@@ -86,6 +90,47 @@ a.menu-link span{
     display: none;
 }
 
+/*Screen size change*/
+@media(min-width:768px){
+    /*Element arrangement change*/
+    
+    img.natgeo-logo{
+        display:block;
+    }
+
+    img.natgeo-frame{
+        display: none;
+    }
+
+    a.search-link{
+        display: inline-block;
+        margin-right: 25px;
+    }
+
+    a.news-link{
+        display: inline-block;
+        margin-right: 25px;
+        font-size: 14px;
+        padding: 2px 0;
+        border-bottom: 2px solid #FFD51C;
+        box-shadow: inset 0 0 0 0 #FFD51C;
+        transition: ease-out 0.5s;
+    }
+
+    a.news-link:hover{
+        box-shadow: inset  0 -100px 0 0  #FFD51C;
+        color: black
+    }
+    a.menu-link span{
+        display: inline-block;
+        text-transform: uppercase;
+        margin-right: 15px;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 4px;
+    }
+
+}
 
 /*header*/
 header{
@@ -109,10 +154,11 @@ header p.title{
 
 header p.description{
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 header p.description span{
+    padding: 2px 0;
     border-bottom: 2px solid #FFD51C;
     box-shadow: inset 0 0 0 0 #FFD51C;
     transition: ease-out 0.5s;
@@ -123,17 +169,26 @@ header p.description span:hover{
     color: black
 }
 
+div.border{
+    border-bottom: 4px solid #FFD51C;
+    width: 30px;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
 /*Main*/
 main{
     display: flex;
     flex-direction: column;
 }
 
+
 /*Main news*/
 .main-news{
     position: relative; /*parent*/
     overflow: hidden;
 }
+
 
 .img-container:hover{
     transform: scale(1.1);
@@ -143,6 +198,42 @@ main{
     top: 150px;
     left: 30px;
     color: white;
+}
+
+@media(min-width:768px){
+    /*Element arrangement change*/
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3rem;
+    }
+
+    .flex-container-reversed{
+        width: 60%;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+
+    main{
+        margin-left: 20px;
+    }
+
+    .flex-container-reversed main{
+        flex-basis: 50rem;
+    }
+
+    .flex-container-reversed section{
+        flex-basis: 25rem;
+    }
+    .main-news-text{
+        position: absolute;
+        top: 240px;
+        left: 30px;
+    }
 }
 
 .main-news-text h3{
@@ -179,6 +270,7 @@ main{
     margin-top: 20px;
     overflow: hidden;
 }
+
 .secondary-news:hover img{
     border-bottom: 5px solid #FFD51C;
     transform: scale(1.1);
@@ -196,6 +288,11 @@ main{
     padding: 20px;
 }
 
+@media(min-width:768px){
+    .secondary-news-text{
+        height: 140px;
+    }
+}
 .secondary-news-text h3{
     margin-top: 10px;
     margin-bottom: 15px;
@@ -235,7 +332,6 @@ main{
     display: flex;
     flex-direction: column;
     color: white;
-       
 }
 
 .todays-picks h2{
@@ -247,6 +343,19 @@ main{
     margin-bottom: 20px;
 }
 
+.todays-picks p span{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #FFD51C;
+    box-shadow: inset 0 0 0 0 #FFD51C;
+    transition: ease-out 0.5s;
+}
+
+.todays-picks p span:hover{
+    box-shadow: inset  0 -100px 0 0  #FFD51C;
+    color: black
+}
 .pick-element{
     display: flex;
     flex-direction: row;
@@ -256,8 +365,9 @@ main{
 }
 
 .pick-element-img img{
-    width: 120px;
+    max-width: 100px;
     height: 100px;
+    
 }
 
 .pick-element-text{
@@ -285,4 +395,5 @@ main{
 
 .pick-element-text p:hover{
     text-decoration: underline;
+    cursor: pointer;
 }

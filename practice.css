@@ -22,3 +22,27 @@ td{
     padding: 1rem;
     height: 50px;
 }
+
+/*Display: grid*/
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.grid-child{
+    border: 1px solid green;
+    background-color: greenyellow;
+    height: 5rem;
+}
+
+@media(min-width: 768px) {
+    body{
+        background-color: bisque;
+    }
+
+    .grid-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
